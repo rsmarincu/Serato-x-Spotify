@@ -1,0 +1,14 @@
+{%extends 'layout.html' %}
+
+{% block body %}
+
+{% for playlist in playlists %}
+<h5>{{playlist}}</h5>
+
+{% for track in tracks[loop.index0] %}
+<p>{{track[0]}}------{{track[1]}}-------{{track[2]}}</p>
+
+{% endfor %}
+{% endfor %}
+
+{% endblock%}
